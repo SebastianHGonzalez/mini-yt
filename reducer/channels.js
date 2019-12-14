@@ -1,17 +1,38 @@
 import { combineReducers } from 'redux';
-import actionTypes from 'constants/actionTypes';
+import { normalize } from 'normalizr';
 
-function allIds(state = new Set(), { type, channel }) {
+import actionTypes from 'constants/actionTypes';
+import { channelSchema, postSchema } from 'constants/schemas';
+
+export function allIds(state = new Set(), { type, post, channel }) {
   switch (type) {
-    case actionTypes.CHANNEL_ADDED: return state.add(channel.id);
-    default: return state;
+    case actionTypes.CHANNEL_ADDED:
+      return Object.keys(
+        normalize(channel, channelSchema).entities.channels,
+      ).reduce((acc, curr) => acc.add(curr), state);
+    case actionTypes.POST_ADDED:
+      return Object.keys(
+        normalize(post, postSchema).entities.channels,
+      ).reduce((acc, curr) => acc.add(curr), state);
+    default:
+      return state;
   }
 }
 
-function byId(state = {}, { type, channel }) {
+export function byId(state = {}, { type, post, channel }) {
   switch (type) {
-    case actionTypes.CHANNEL_ADDED: return { ...state, [channel.id]: channel };
-    default: return state;
+    case actionTypes.CHANNEL_ADDED:
+      return {
+        ...state,
+        ...normalize(channel, channelSchema).entities.channels,
+      };
+    case actionTypes.POST_ADDED:
+      return {
+        ...state,
+        ...normalize(post, postSchema).entities.channels,
+      };
+    default:
+      return state;
   }
 }
 

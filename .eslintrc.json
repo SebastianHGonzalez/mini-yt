@@ -3,7 +3,7 @@
         "browser": true,
         "es6": true
     },
-    "extends": ["airbnb", "plugin:import/errors", "plugin:import/warnings"],
+    "extends": ["airbnb", "plugin:import/errors", "plugin:import/warnings", "plugin:jest/recommended"],
     "settings": {
       "import/resolver": {
         "node": {

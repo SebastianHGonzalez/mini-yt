@@ -7,6 +7,18 @@ const axios = create({
   baseURL,
 });
 
-export function getChannelById(channelId) {
-  return axios.get(channelId).then(({ data }) => data);
+/**
+ * @param {String} channelId
+ * @param {Object} params
+ */
+export function getChannelById(channelId, params = {}) {
+  return axios.get(channelId, { params }).then(({ data }) => data);
+}
+
+/**
+ * @param {String} channelId
+ * @param {Object} params
+ */
+export function getChannelByIdWithPosts(channelId, params = {}) {
+  return getChannelById(channelId, { ...params, _embed: 'posts' });
 }

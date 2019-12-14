@@ -24,7 +24,7 @@ function ChannelPage({ channelId }) {
 }
 
 ChannelPage.getInitialProps = async ({ store, query: { channelId } }) => {
-  const channel = await channels.getChannelById(channelId);
+  const channel = await channels.getChannelByIdWithPosts(channelId);
 
   store.dispatch(channelAdded(channel));
 
