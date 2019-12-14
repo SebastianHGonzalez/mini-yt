@@ -17,6 +17,14 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: (
           <>
+            <style global>
+              {`
+                html, body, #__next {
+                  height: 100%;
+                  margin: 0;
+                }
+              `}
+            </style>
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
