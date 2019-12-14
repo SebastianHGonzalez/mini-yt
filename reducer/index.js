@@ -1,3 +1,7 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({});
+import channels from './channels';
+
+export default combineReducers({
+  channels,
+});

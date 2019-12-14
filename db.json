@@ -1,0 +1,6 @@
+{
+  "channels": [
+      { "id": 1, "name": "my awesom channel" },
+      { "id": 2, "name": "the other one" }
+    ]
+}

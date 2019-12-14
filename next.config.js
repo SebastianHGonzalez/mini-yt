@@ -1,6 +1,7 @@
+require('dotenv').config();
 const path = require('path');
 
-const moduleNames = ['components', 'constants', 'actions', 'reducer', 'saga', 'store'];
+const moduleNames = ['components', 'constants', 'hooks', 'actions', 'reducer', 'saga', 'store', 'services'];
 
 module.exports = {
   webpack(config, options) {
@@ -8,5 +9,17 @@ module.exports = {
       (moduleName) => (config.resolve.alias[moduleName] = path.join(__dirname, moduleName)),
     );
     return config;
+  },
+
+  serverRuntimeConfig: {
+    // Will only be available on the server side
+  },
+  publicRuntimeConfig: {
+    // Will be available on both server and client
+    services: {
+      channels: {
+        baseURL: process.env.PUBLIC_CHANNELS_SERVICE_BASE_URL,
+      },
+    },
   },
 };
