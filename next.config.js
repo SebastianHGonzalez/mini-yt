@@ -1,6 +1,6 @@
 const path = require('path');
 
-const moduleNames = ['components', 'constants'];
+const moduleNames = ['components', 'constants', 'actions', 'reducer', 'saga', 'store'];
 
 module.exports = {
   webpack(config, options) {
