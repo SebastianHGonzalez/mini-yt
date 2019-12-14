@@ -1,3 +1,4 @@
 export default {
   CHANNEL_ADDED: 'CHANNEL_ADDED',
+  POST_ADDED: 'POST_ADDED',
 };

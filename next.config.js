@@ -20,6 +20,9 @@ module.exports = {
       channels: {
         baseURL: process.env.PUBLIC_CHANNELS_SERVICE_BASE_URL,
       },
+      posts: {
+        baseURL: process.env.PUBLIC_POSTS_SERVICE_BASE_URL,
+      },
     },
   },
 };
