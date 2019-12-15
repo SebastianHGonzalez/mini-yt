@@ -20,5 +20,5 @@ export function getChannelById(channelId, params = {}) {
  * @param {Object} params
  */
 export function getChannelByIdWithPosts(channelId, params = {}) {
-  return getChannelById(channelId, { ...params, _embed: 'posts' });
+  return getChannelById(channelId, { ...params, _embed: ['posts', 'collections'] });
 }

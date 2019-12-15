@@ -3,6 +3,10 @@
     { "id": 1, "name": "my awesom channel" },
     { "id": 2, "name": "the other one" }
   ],
+  "collections": [
+    { "id": 1, "type": "FEATURED", "channelId": 1, "posts": [1, 2] },
+    { "id": 1, "type": "FEATURED", "channelId": 2, "posts": [4] }
+  ],
   "posts": [
     { "id": 1, "title": "Post 1 title", "channelId": 1 },
     { "id": 2, "title": "Post 2 title", "channelId": 1 },

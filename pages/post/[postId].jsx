@@ -26,7 +26,7 @@ function PostPage({ postId }) {
 }
 
 PostPage.getInitialProps = async ({ store, query: { postId } }) => {
-  const post = await posts.getPostById(postId);
+  const post = await posts.getPostByIdWithChannel(postId);
 
   store.dispatch(postAdded(post));
 
