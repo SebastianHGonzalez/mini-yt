@@ -1,5 +1,5 @@
-import { channelAdded } from 'actions/channel';
-import { postAdded } from 'actions/post';
+import { channelAdded } from 'actions/channels';
+import { postAdded } from 'actions/posts';
 
 import { allIds, byId } from 'reducer/channels';
 

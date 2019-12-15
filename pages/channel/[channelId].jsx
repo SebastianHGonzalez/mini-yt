@@ -6,7 +6,7 @@ import { PublicPageLayout } from 'components/layout/page';
 
 import { channels } from 'services';
 
-import { channelAdded } from 'actions/channel';
+import { channelAdded } from 'actions/channels';
 
 import useChannel from 'hooks/useChannel';
 

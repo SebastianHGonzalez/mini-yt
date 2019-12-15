@@ -1,4 +1,4 @@
-import { channelAdded } from 'actions/channel';
+import { channelAdded } from 'actions/channels';
 
 import { allIds, byId } from 'reducer/collections';
 

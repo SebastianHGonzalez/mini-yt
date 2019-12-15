@@ -1,7 +1,7 @@
 require('dotenv').config();
 const path = require('path');
 
-const moduleNames = ['components', 'constants', 'hooks', 'actions', 'reducer', 'saga', 'store', 'services'];
+const moduleNames = ['components', 'constants', 'hooks', 'actions', 'reducer', 'saga', 'selectors', 'store', 'services'];
 
 module.exports = {
   webpack(config, options) {

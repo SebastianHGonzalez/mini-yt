@@ -6,7 +6,7 @@ import { PublicPageLayout } from 'components/layout/page';
 
 import { posts } from 'services';
 
-import { postAdded } from 'actions/post';
+import { postAdded } from 'actions/posts';
 
 import usePost from 'hooks/usePost';
 
