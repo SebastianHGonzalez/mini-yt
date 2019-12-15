@@ -1,11 +1,11 @@
 {
   "channels": [
-    { "id": 1, "name": "my awesom channel" },
-    { "id": 2, "name": "the other one" }
+    { "id": 1, "name": "my awesom channel", "subscriberCount": 100999000 },
+    { "id": 2, "name": "the other one", "subscriberCount": 100999 }
   ],
   "collections": [
-    { "id": 1, "type": "FEATURED", "channelId": 1, "posts": [1, 2] },
-    { "id": 1, "type": "FEATURED", "channelId": 2, "posts": [4] }
+    { "id": 1, "type": "FEATURED", "channelId": 1, "name": "collection-1", "posts": [1, 2] },
+    { "id": 2, "type": "FEATURED", "channelId": 2, "name": "collection-2", "posts": [4] }
   ],
   "posts": [
     { "id": 1, "title": "Post 1 title", "channelId": 1 },

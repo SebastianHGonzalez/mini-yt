@@ -8,17 +8,13 @@ import { channels } from 'services';
 
 import { channelAdded } from 'actions/channels';
 
-import useChannel from 'hooks/useChannel';
+import { ChannelHeader, ChannelCollections } from 'components/channel';
 
 function ChannelPage({ channelId }) {
-  const [channel] = useChannel(channelId);
-
   return (
     <PublicPageLayout>
-      Channel:
-      {channel.name}
-      Id:
-      {channel.id}
+      <ChannelHeader channelId={channelId} />
+      <ChannelCollections channelId={channelId} />
     </PublicPageLayout>
   );
 }
