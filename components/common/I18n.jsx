@@ -2,30 +2,13 @@ import { string, shape } from 'prop-types';
 
 import useI18n from 'hooks/useI18n';
 
-
-const fillTagRegex = /\${(.*?)}/g; // it matches all tags in a string ex. '${foo}'
-const fillTagCleanupRegex = /[a-zA-Z0-9]+/g; // it cleans up tag sintax ex. '${foo}' => 'foo'
-
 /**
- * Replaces string tags with values in provided as fillers
- * ex. "a ${foo} is a ${baz}", { foo: "dog", baz: "canine"} => "a dog is a canine"
- *
  * @param {string} message
  * @param {{[key: string]: string}} fillers
  * @returns {string} filled message
  */
-function fillMessage(message, fillers = {}) {
-  return (message.match(fillTagRegex) || [])
-    .map((fillTag) => ({
-      fillTag,
-      fillerKey: fillTag.match(fillTagCleanupRegex)[0],
-    }))
-    .reduce(
-      (partiallyFilledMessage, { fillTag, fillerKey }) => (
-        partiallyFilledMessage.replace(fillTag, fillers[fillerKey] || fillTag)
-      ),
-      message,
-    );
+export function fillMessage(message, fillers = {}) {
+  return message.split(/[(${)}]/g).map((curr) => fillers[curr] || curr).filter((i) => i);
 }
 
 function I18n({ id, fallback, fillers }) {

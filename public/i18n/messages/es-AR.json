@@ -1,5 +1,5 @@
 {
     "post.viewCount.label": "${viewCount} vistas",
     "collection.featured.label": "Publicaciones destacadas",
-    "channel.header.subscriberCount.label": "subscriptores"
+    "channel.header.subscriberCount.label": "${count} subscriptores"
 }

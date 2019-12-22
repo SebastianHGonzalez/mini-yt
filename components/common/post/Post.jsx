@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import I18n from 'components/common/I18n';
 import FormatedDate from 'components/common/FormatedDate';
+import FormatedNumber from 'components/common/FormatedNumber';
 import PostThumbnail from 'components/common/post/PostThumbnail';
 
 import usePost from 'hooks/usePost';
@@ -33,7 +34,7 @@ function Post({ className, postId }) {
       <PostTitle>{title}</PostTitle>
       <PostMetadata>
         <ViewCount>
-          <I18n id="post.viewCount.label" fillers={{ viewCount }} />
+          <I18n id="post.viewCount.label" fillers={{ viewCount: <FormatedNumber value={viewCount} /> }} />
         </ViewCount>
         <wbr />
         <UploadDate>
