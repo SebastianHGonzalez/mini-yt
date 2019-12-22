@@ -4,8 +4,10 @@
     { "id": 2, "name": "the other one", "subscriberCount": 100999 }
   ],
   "collections": [
-    { "id": 1, "type": "FEATURED", "channelId": 1, "name": "collection.featured.label", "posts": [1, 2] },
-    { "id": 2, "type": "FEATURED", "channelId": 2, "name": "collection.featured.label", "posts": [4] }
+    { "id": 1, "type": "FEATURED", "channelId": 1, "name": "collection.featured.label", "posts": [1, 1, 1, 1, 1, 1, 1, 2] },
+    { "id": 2, "type": "FEATURED", "channelId": 1, "name": "collection.featured.label", "posts": [1, 1, 1, 1, 1, 1, 1, 2] },
+    { "id": 3, "type": "FEATURED", "channelId": 1, "name": "collection.featured.label", "posts": [1, 1, 1, 1, 1, 1, 1, 2] },
+    { "id": 4, "type": "FEATURED", "channelId": 2, "name": "collection.featured.label", "posts": [4] }
   ],
   "posts": [
     { "id": 1, "title": "Post 1 title", "channelId": 1, "thumbnail": { "src": "https://i.ytimg.com/vi/r5vsUta5lmo/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLATbeoOGHLdXB9vVaDkqeNNhxIR3g" }, "viewCount": 200123, "uploadDate": "2019-12-15T17:45:21.406Z" },

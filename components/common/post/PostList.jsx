@@ -1,32 +1,12 @@
-import React from 'react';
-import { string, node } from 'prop-types';
 import styled from 'styled-components';
+import Carousel, { CarouselListItem } from '../carousel/Carousel';
 
-export const PostListItem = styled.li`
+
+export const PostListItem = styled(CarouselListItem)`
+  flex-basis: auto;
+  margin-inline-end: 4px;
 `;
 
-function PostList({ className, children }) {
-  return (
-    <ul className={className}>{children}</ul>
-  );
-}
+const PostList = styled(Carousel).attrs({ listItemComponent: PostListItem })``;
 
-PostList.propTypes = {
-  className: string,
-  children: node,
-};
-
-PostList.defaultProps = {
-  className: undefined,
-  children: undefined,
-};
-
-export default styled(PostList)`
-  list-style: none;
-  padding: 0;
-  
-  display: grid;
-  grid-auto-flow: column;
-  width: min-content;
-  grid-gap: 4px;
-`;
+export default PostList;

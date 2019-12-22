@@ -5,7 +5,7 @@ import {
 import styled from 'styled-components';
 
 import I18n from 'components/common/I18n';
-import { PostList, PostListItem, Post } from 'components/common/post';
+import { PostList, Post } from 'components/common/post';
 
 const CollectionName = styled.h3``;
 
@@ -17,9 +17,7 @@ function Collection({
       <CollectionName><I18n id={name} /></CollectionName>
       <PostList type={type}>
         {postIds.map((postId) => (
-          <PostListItem key={postId}>
-            <Post postId={postId} />
-          </PostListItem>
+          <Post postId={postId} />
         ))}
       </PostList>
     </article>
