@@ -1,3 +1,5 @@
 {
+    "post.viewCount.label": "views ${viewCount}",
+    "collection.featured.label": "Featured posts",
     "channel.header.subscriberCount.label": "subscriptors"
 }

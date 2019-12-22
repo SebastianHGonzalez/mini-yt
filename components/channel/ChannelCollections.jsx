@@ -10,8 +10,10 @@ function ChannelCollections({ className, channelId }) {
   const [collections] = useChannelCollections(channelId);
   return (
     <section className={className}>
-      {collections.map(({ id, type, posts }) => (
-        <Collection key={id} id={id} type={type} postIds={posts} />
+      {collections.map(({
+        id, type, name, posts,
+      }) => (
+        <Collection key={id} id={id} type={type} name={name} postIds={posts} />
       ))}
     </section>
   );
