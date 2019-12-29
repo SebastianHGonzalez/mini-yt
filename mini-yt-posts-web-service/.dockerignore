@@ -1,0 +1,12 @@
+.git
+.gitignore
+node_modules
+npm-debug.log
+.editorconfig
+.env
+.env.template
+.eslintignore
+.eslint.json
+.travis.yml
+README.md
+dist
