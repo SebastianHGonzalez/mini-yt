@@ -1,4 +1,4 @@
-# mini-yt-web-api
+# mini-yt-channels-web-service
 
 ## Development
 

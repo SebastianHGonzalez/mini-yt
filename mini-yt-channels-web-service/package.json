@@ -1,7 +1,7 @@
 {
-  "name": "mini-yt-web-api",
+  "name": "mini-yt-channels-web-service",
   "version": "1.0.0",
-  "description": "web api",
+  "description": "channels web service",
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
@@ -12,6 +12,7 @@
   "author": "sebastian gonzalez",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },
