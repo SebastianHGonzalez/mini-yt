@@ -1,12 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 
+import createChannelHandler from 'handlers/commands/createChannelHandler';
+
 const channelsRouter = express.Router();
 
-channelsRouter.use(bodyParser.json());
-
-channelsRouter.post('/', (req, res) => {
-    res.send(req.body);
-});
+channelsRouter.post('/', bodyParser.json(), createChannelHandler);
 
 export default channelsRouter;

@@ -1,8 +1,8 @@
 import express from 'express';
 
-import getConfig from './config';
+import getConfig from 'config';
 
-import channels from './routes/channels';
+import channels from 'routes/channels';
 
 const {
   PORT,
