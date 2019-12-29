@@ -25,3 +25,25 @@ npm run dev:api
 ```bash
 npm run dev
 ```
+
+## Testing
+
+```bash
+npm run test
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Production
+
+- Configure env variables (see `.env.template`)
+
+- Run server
+
+```bash
+npm start
+```

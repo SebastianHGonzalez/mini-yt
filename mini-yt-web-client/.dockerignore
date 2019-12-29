@@ -9,4 +9,5 @@ npm-debug.log
 .eslint.json
 .travis.yml
 README.md
-dist
+.next
+db.json

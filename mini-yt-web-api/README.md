@@ -34,6 +34,10 @@ npm run build
 
 ## Production
 
+- Configure env variables (see `.env.template`)
+
+- Run server
+
 ```bash
 npm start
 ```
